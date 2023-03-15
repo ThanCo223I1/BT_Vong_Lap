@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  let sum = 0;
+  let count = 0; // dem xem tim duoc bao nhieu so chia het cho 7 roi
+  for (let i=0; i<10000; i++){
+    if(count >= 30){
+      document.write(sum);
+      break;
+    }
+   if(i % 7 === 0){
+      console.log(i)
+     sum+=i;
+     count++;
+   }
+  }
+</script>
 </body>
 </html>
