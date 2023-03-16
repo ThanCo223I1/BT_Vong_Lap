@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <p id="demo"></p>
+</head>
+<body>
+<script>
+    let arr = [5,3,8,2,7];
+    let maxofindex = 0;
+    let minofindex = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[maxofindex] < arr[i]) {
+        maxofindex = i
+            X = arr[maxofindex];
+    }
+        for (let j = 1; j < arr.length; j++) {
+        if (arr[minofindex] > arr[j]) {
+        minofindex = j
+            Y = arr[minofindex];
+    }
+    }
+    }
+    arr[maxofindex]= Y;
+    arr[minofindex]= X;
+    document.getElementById("demo").innerHTML=  arr.join(",");
+</script>
+</body>
+</html>
