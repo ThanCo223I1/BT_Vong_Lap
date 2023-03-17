@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoChan</title>
+    <p id="Even"></p>
+</head>
+<body>
+<script>
+    n = 8;
+    arr = [1,2,4,5,6,8,2,3];
+    let even = 0;
+    for (let i = 0; i < arr.length;i++){
+        if (arr[i]%2 === 0){
+            even++;
+            document.getElementById("Even").innerHTML= ("Even of arr:  ") + even;
+        }
+    }
+
+</script>
+</body>
+</html>

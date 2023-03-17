@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demphantu</title>
+  <p id="Count"></p>
+</head>
+<body>
+<script>
+  a = parseInt(prompt("Nhap so a"));
+  arr = [1,2,4,5,6,8,2,3];
+   let count = 0;
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] === a) {
+      count++;
+    }
+  }
+  document.getElementById("Count").innerHTML = ("Số lượng phần tử là:  ") + count;
+</script>
+</body>
+</html>
