@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="total"></p>
+<script>
+  let arr = [1,2,4,5,6,8,2,3];
+  let tong = 0;
+  for (let i = 0; i < arr.length; i++) {
+      // kiem tra arr[i] co phai la snt hay khong
+      let a = arr[i];
+      // kiem tra a co phai la snt hay khong
+      for (let i = 2; i <= a; i++) {
+          if (i === a) {
+              // document.write("La SNT");
+              tong += a;
+              break;
+          }
+          if (a % i === 0) {
+              // document.write("Khong la SNT");
+              break;
+          }
+      }
+
+  }
+  document.getElementById("total").innerHTML = ("Tong cua SNT la: ") + tong;
+</script>
+</body>
+</html>

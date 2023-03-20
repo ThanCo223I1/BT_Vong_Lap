@@ -3,28 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <p id="demo"></p>
 </head>
+<p id="demo"></p>
 <body>
+</body>
 <script>
     let arr = [5,3,8,2,7];
-    let maxofindex = 0;
-    let minofindex = 0;
+    let maxOfIndex = 0;
+    let minOfIndex = 0;
+    let max;
+    let min
     for (let i = 1; i < arr.length; i++) {
         if (arr[maxofindex] < arr[i]) {
-        maxofindex = i
-            X = arr[maxofindex];
-    }
+            maxofindex = i
+            max = arr[maxofindex];
+        }
         for (let j = 1; j < arr.length; j++) {
-        if (arr[minofindex] > arr[j]) {
-        minofindex = j
-            Y = arr[minofindex];
+            if (arr[minofindex] > arr[j]) {
+                minofindex = j
+                min = arr[minofindex];
+            }
+        }
     }
-    }
-    }
-    arr[maxofindex]= Y;
-    arr[minofindex]= X;
+    arr[maxofindex]= min;
+    arr[minofindex]= max;
     document.getElementById("demo").innerHTML=  arr.join(",");
 </script>
-</body>
 </html>

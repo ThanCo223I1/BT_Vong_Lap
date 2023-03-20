@@ -3,41 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <p id="number"></p>
-    <p id="number1">
-    </p>
 </head>
+<p id="demo"></p>
 <body>
+</body>
 <script>
-    let arr = [
-        [1, 2, 3, 4, 5],
-        [6, 7, 8, 9, 10]
-    ];
-    let maxofindex = arr[0][0];
-    let minofindex = arr[0][0];
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            if (arr[i][j] > maxofindex) {
-                maxofindex = arr[i][j];
+    let arr = [5, 3, 8, 2, 7];
+    let maxOfIndex = 0;
+    let minOfIndex = 0;
+    let max;
+    let min;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[maxOfIndex] < arr[i]) {
+            maxOfIndex = i
+            max = arr[maxOfIndex];
+        }
+        for (let j = 1; j < arr.length; j++) {
+            if (arr[minOfIndex] > arr[j]) {
+                minOfIndex = j
+                min = arr[minOfIndex];
             }
         }
-            if (arr[i][j] < minofindex) {
-                minofindex = arr[i][j];
-            }
     }
-
-
-    // let minofindex = arr[0][0];
-    // for (let i = 0; i < arr.length; i++) {
-    //     for (let j = 0; j < arr[i].length; j++) {
-    //         if (arr[i][j] < minofindex) {
-    //             minofindex = arr[i][j];
-    //
-    //         }
-    //     }
-    // }
-    document.getElementById("number").innerHTML = "Giá trị Max của mảng là: " +  maxofindex;
-    document.getElementById("number1").innerHTML = "Giá trị Min của mảng là: " + minofindex;
+    arr[maxOfIndex] = min;
+    arr[minOfIndex] = max;
+    document.getElementById("demo").innerHTML = arr.join(",");
 </script>
-</body>
 </html>

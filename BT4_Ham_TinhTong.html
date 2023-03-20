@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="total"></p>
+<script>
+   let tong =0;
+   for (let i = 0; i < 500; i++) {
+       let a = i;
+       for (let j = 0; j <= a; j++) {
+           if (i === a){
+               tong += a;
+               break;
+           }
+           if ( a % i === 0 ){
+               break;
+           }
+       }
+   }
+   document.getElementById("total").innerHTML=("Tong cac SNT nho hon 500 la: ") + tong;
+</script>
+</body>
+</html>
